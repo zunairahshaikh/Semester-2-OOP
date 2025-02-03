@@ -9,9 +9,6 @@ Your task is to create one calendar object, then hardcode 5-6 tasks for your cal
 you’ll remove a task, and display the updated task list.*/
 
 #include <iostream>
-#include <string>
-#include <iomanip>
-
 using namespace std;
 
 class Calendar {
