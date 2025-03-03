@@ -28,7 +28,15 @@ class LoanHelper{
 };
 
 int main(){
-    LoanHelper lh(0.005, 12000, 12);
+    float interestRate;
+    cout << "Enter interest rate: ";
+    cin >> interestRate;
+    while(interestRate < 0 || interestRate > 0.5){
+        cout << "Interest rate should be between 0-0.5%" << endl;
+        cout << "Enter interest rate: ";
+        cin >> interestRate;
+    }
+    LoanHelper lh(interestRate, 12000, 12);
     lh.calculatePayment();
     return 0;
 }
