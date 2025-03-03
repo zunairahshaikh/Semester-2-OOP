@@ -40,28 +40,30 @@ class Square{
         float getArea(){
             return area;
         }
-        static float getAllAreas(){
-            return allareas;
-        }
+
+        static float getAllAreas();
 };
 
 float Square::allareas =0.0;
+float Square:: getAllAreas(){
+        return allareas;
+}
 
 int main(){
     Square s1(2);
     s1.calculateArea();
     cout << "Area of s1: " << s1.getArea() << endl;
-    cout << "All areas: " << s1.getAllAreas() << endl;
+    cout << "All areas: " << Square::getAllAreas() << endl;
 
     Square s2(3.95);
     s2.calculateArea();
     cout << "Area of s2: " << s2.getArea() << endl;
-    cout << "All areas: " << s2.getAllAreas() << endl;
+    cout << "All areas: " << Square::getAllAreas() << endl;
 
     Square s3(4);
     s3.calculateArea();
     cout << "Area of s3: " << s3.getArea() << endl;
-    cout << "All areas: " << s3.getAllAreas() << endl;
+    cout << "All areas: " << Square::getAllAreas() << endl;
 
     return 0;
 }
