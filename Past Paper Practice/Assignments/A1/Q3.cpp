@@ -65,8 +65,8 @@ public:
         cout << "Enter Age: ";
         while (!(cin >> age) || age <= 0) {
             cout << "Invalid input! Enter a valid age: ";
-            cin.clear();
-            cin.ignore(1000, '\n');
+            cin.clear();    //If the user enters invalid input (like "abc" instead of a number), cin goes into a fail state. cin.clear() resets the fail state so we can take input again.
+            cin.ignore(1000, '\n');    //f invalid input is entered (like "abc"), it leaves garbage characters in the input buffer. cin.ignore(1000, '\n'); clears the leftover characters (up to 1000 characters or until a newline '\n' is found).
         }
 
         cout << "Enter Contact Number: ";
