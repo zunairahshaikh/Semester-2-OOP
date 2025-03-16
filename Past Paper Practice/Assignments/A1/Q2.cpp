@@ -163,8 +163,7 @@ class Game{
                 ballY = currBallPos.y;
 
                 team->getRobot()->hitBall(ballX,ballY,dir);
-                ball->move(ballX - ball->getX(), ballY - ball->getY());
-
+                ball->move(ballX - ball->getX(), ballY - ball->getY()); // ballX - ball->getX() computes how much x has changed and same for ballY - ball->geyY().These values are then passed to move(dx, dy) since dx is change in x
                 if(goal->isGoalReached(ballX, ballY)){
                     ball-> resetX();
                     ball-> resetY();
