@@ -119,3 +119,21 @@ class Polygon : public Shape {
             return perimeter;
         }
 };
+
+int main() {
+    Shape* shapes[4];
+    shapes[0] = new Circle(10, 10, "Red", 5);
+    shapes[1] = new Rectangle(20, 20, "Green", 10, 15);
+    shapes[2] = new Triangle(30, 30, "Blue", 3, 4, 5);
+    int sides[] = {4, 5, 6, 7};
+    shapes[3] = new Polygon(40, 40, "Yellow", 4, sides);
+
+    for (int i = 0; i < 4; i++) {
+        shapes[i]->draw();
+        cout << "Area: " << shapes[i]->calculateArea() << endl;
+        cout << "Perimeter: " << shapes[i]->calculatePerimeter() << endl;
+        cout << endl;
+    }
+
+    return 0;
+}
