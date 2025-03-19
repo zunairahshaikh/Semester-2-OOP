@@ -56,8 +56,8 @@ private:
     double interestRate, minimumBalance;
 
 public:
-    SavingsAccount(int an, string ahn, double b, string at = "Savings", double rate = 0.0, double minBal = 0.0)
-        : Account(an, ahn, b, at), interestRate(rate), minimumBalance(minBal) {}
+    SavingsAccount(int an, string ahn, double b, string at = "Savings", double rate, double mb)
+        : Account(an, ahn, b, at), interestRate(rate), minimumBalance(mb) {}
 
     void calculateInterest() override {
         double interest = balance * interestRate / 100;
@@ -68,7 +68,8 @@ public:
     void withdraw(double amount) override {
         if (balance - amount < minimumBalance) {
             cout << "Withdrawal not allowed. Minimum balance requirement not met." << endl;
-        } else {
+        }
+        else {
             Account::withdraw(amount);
         }
     }
