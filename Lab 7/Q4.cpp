@@ -38,6 +38,10 @@ class Person{
             phoneNumber = p;
             email = e;
         }
+
+        string getName(){
+            return name;
+        }
 };
 
 class Student : public Person{
@@ -99,7 +103,7 @@ class Course{
         Course(int ci, string cn, int c, string i, string s) : courseID(ci), courseName(cn), credits(c), instructor(i), schedule(s) {}
 
         void registerStudent(Student* student){
-            cout << student->name << " registered for " << courseName << endl;
+            cout << student->getName() << " registered for " << courseName << endl;
         }
 
         void calculateGrades(){
