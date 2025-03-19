@@ -92,3 +92,38 @@ void searchMedia(long int ISBN) {
 void searchMedia(int publicationYear) {
     cout << "Searching for media published in: " << publicationYear << endl;
 }
+
+int main() {
+    Book book1("The Great Gatsby", "B001", "1925", "Scribner", "F. Scott Fitzgerald", 978074, 218);
+    DVD dvd1("Inception", "D001", "2010", "Warner Bros", "Christopher Nolan", 148, 8.8);
+    CD cd1("Thriller", "C001", "1982", "Epic Records", "Michael Jackson", "Pop", 9);
+    Magazine mag1("National Geographic", "M001", "2024", "NatGeo");
+
+    cout << "\n--- Book Info ---\n";
+    book1.displayInfo();
+    book1.checkOut();
+    book1.returnItem();
+
+    cout << "\n--- DVD Info ---\n";
+    dvd1.displayInfo();
+    dvd1.checkOut();
+    dvd1.returnItem();
+
+    cout << "\n--- CD Info ---\n";
+    cd1.displayInfo();
+    cd1.checkOut();
+    cd1.returnItem();
+
+    cout << "\n--- Magazine Info ---\n";
+    mag1.displayInfo();
+    mag1.checkOut();
+    mag1.returnItem();
+
+    cout << "\n--- Searching Media ---\n";
+    searchMedia("The Great Gatsby");  
+    searchMedia(978074);       
+    searchMedia(2010);                  
+
+    return 0;
+}
+
