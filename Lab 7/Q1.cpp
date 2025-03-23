@@ -141,5 +141,8 @@ int main() {
     acc3->printStatement();
     cout << endl;
 
+delete acc1;
+delete acc2;
+delete acc3;
     return 0;
 }
