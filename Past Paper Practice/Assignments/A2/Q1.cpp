@@ -130,7 +130,7 @@ public:
         }
     }
 
-    bool operator==(const Bus &other) const {       //comparing if two buses have the same route
+    bool operator==(const Bus &other) const {    
         if (currentStops != other.currentStops) return false;
         for (int i = 0; i < currentStops; i++) {
             if (routeStops[i] != other.routeStops[i]) return false;
