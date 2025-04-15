@@ -43,8 +43,8 @@ void Library::searchBook() {
     cin >> title;
 
     for (int i = 0; i < bookCount; i++) {
-        if (books[i]->getTtile() == title) {
-            cout << "Book found: " << books[i]->getTtile() << ", " << books[i]->getAuthor() << ", " << books[i]->getISBN() << endl;
+        if (books[i]->getTitle() == title) {
+            cout << "Book found: " << books[i]->getTitle() << ", " << books[i]->getAuthor() << ", " << books[i]->getISBN() << endl;
             return;
         }
     }
