@@ -4,7 +4,7 @@ using namespace std;
 
 Book::Book(string t, string a, string isbn) : title(t), author(a), ISBN(isbn) {}
 
-string Book::getTtile() {
+string Book::getTitle() {
     return title;
 }
 
