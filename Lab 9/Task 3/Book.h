@@ -11,7 +11,7 @@ class Book{
     public:
     Book(std::string t, std::string a, std::string isbn);
 
-    std::string getTtile();
+    std::string getTitle();
     std::string getAuthor();
     std::string getISBN();
 
