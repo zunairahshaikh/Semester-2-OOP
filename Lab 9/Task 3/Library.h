@@ -6,10 +6,11 @@
 
 class Library{
     Book** books;
+    int maxBooks;
     int bookCount;
 
     public:
-        Library(int count);
+        Library(int max);
 
         void addBook();
         void removeBook();
