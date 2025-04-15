@@ -12,7 +12,7 @@ class Library{
     public:
         Library(int max);
 
-        void addBook();
+        void addBook(const Book& book);
         void removeBook();
         void searchBook();
 };
