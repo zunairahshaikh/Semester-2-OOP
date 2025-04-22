@@ -20,7 +20,7 @@ struct Student{
 };
 
 int main(){
-    Student students[2];
+    Student students[5];
 
     ofstream studentsFile("students.txt", ios::out);
     if(!studentsFile){
@@ -28,7 +28,7 @@ int main(){
         return 1;
     }
 
-    for(int i = 0; i < 2; i++){
+    for(int i = 0; i < 5; i++){
         cout << "Enter details for student " << (i + 1) << endl;
         cout << "ID: ";
         cin >> students[i].id;
